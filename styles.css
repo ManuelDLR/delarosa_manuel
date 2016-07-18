@@ -1,14 +1,19 @@
-img {
-    width: 100px;
+/*img {*/
+/*    width: 100px;*/
     
-}
-div {
-    width: 200px;
-    height: 100px;
-}
+/*}*/
+/*div {*/
+/*    width: 200px;*/
+/*    height: 100px;*/
+/*}*/
 h1 {
     font-family: "";
     color: red;
+}
+ul {
+    list-style-type: block;
+    margin: 0;
+    padding: 0;
 }
 body {
     background-image: url('models.jpg');
