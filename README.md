@@ -1,1 +1,0 @@
-# delarosa_manuel
