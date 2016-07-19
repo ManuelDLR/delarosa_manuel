@@ -1,19 +1,21 @@
-/*img {*/
-/*    width: 100px;*/
+img {
+    width: 100px;
     
-/*}*/
-/*div {*/
-/*    width: 200px;*/
-/*    height: 100px;*/
-/*}*/
+}
 h1 {
-    font-family: "";
+    font-family: "Arial";
     color: red;
 }
-ul {
-    list-style-type: block;
-    margin: 0;
-    padding: 0;
+.button {
+    display: inline-block;
+    padding: 1em;
+    background-color: #79BD9A;
+    text-decoration: none;
+    color: white;
+}
+a {
+    color: red;
+    font-family: "Arial";
 }
 body {
     background-image: url('models.jpg');
@@ -23,7 +25,6 @@ body {
     background-position: center;
     text-align: center;
     font-family: "Arial";
-    color: white;
 }
 p {
     color: red;
