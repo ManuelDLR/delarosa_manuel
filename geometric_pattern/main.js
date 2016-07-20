@@ -1,4 +1,4 @@
-var NUM_CIRCLES = 15;
+var NUM_CIRCLES = 10;
 
 var circleDiameter;
 var circleRadius;
@@ -13,7 +13,7 @@ function setup() {
     frameRate(60);
     
     circleDiameter = width/NUM_CIRCLES;
-    circleRadius = circleDiameter/15;
+    circleRadius = circleDiameter/10;
     
     rVal = 100;
     gVal = 200;
@@ -24,7 +24,7 @@ function draw() {
     var isShifted = false;
     
     var y = height + 50;
-    while (y >= 5) {
+    while (y >= -50) {
     
     var x;
     
@@ -44,9 +44,9 @@ function draw() {
     y = y - circleRadius;
     isShifted = !isShifted;
     
-    rVal = (rVal +150) % 256;
-    gVal = (gVal - 500) % 256;
-    bVal = (bVal +3) % 256;
+    rVal = (rVal +300) % 256;
+    gVal = (gVal + 200) % 256;
+    bVal = (bVal + 100) % 256;
   }    
 }
 
