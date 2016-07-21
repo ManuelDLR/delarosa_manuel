@@ -33,7 +33,7 @@ function draw() {
     player.position.x -= 10;
   }
 
-  enemy.position.y = enemy.position.y + 15;
+  enemy.position.y = enemy.position.y + 12;
   
   if (enemy.position.y > height) {
       enemy.position.y = 0;
