@@ -6,9 +6,9 @@ var backgroundImage;
 var isGameOver;
 
 function preload() {
-    playerImage = loadImage("obama.png");
-    enemyImage = loadImage("trump.png");
-    backgroundImage = loadImage("usflag.jpg");
+    playerImage = loadImage("playerbatman.png");
+    enemyImage = loadImage("enemyjoker.png");
+    backgroundImage = loadImage("bpic.jpg");
 }
 
 function setup() {
