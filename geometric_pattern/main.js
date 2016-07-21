@@ -47,7 +47,7 @@ function draw() {
     rVal = (rVal +300) % 256;
     gVal = (gVal + 200) % 256;
     bVal = (bVal + 100) % 256;
-  }    
+  }
 }
 
 function keyPressed() {
