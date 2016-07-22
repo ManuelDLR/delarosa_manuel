@@ -42,25 +42,25 @@ function draw() {
   background(backgroundImage);
 
   if(keyDown(RIGHT_ARROW) && player.position.x < (width - (playerImage.width/2))){
-    player.position.x += 10;
+    player.position.x += 15;
   }
 
   if(keyDown(LEFT_ARROW) && player.position.x > (playerImage.width/2)){
-    player.position.x -= 10;
+    player.position.x -= 15;
   }
   
   if(keyDown(DOWN_ARROW) && player.position.y < (width - (playerImage.width/2))){
-    player.position.y += 10;
+    player.position.y += 15;
   }
   
   if(keyDown(UP_ARROW) && player.position.y > (playerImage.width/2)){
-    player.position.y -= 10;
+    player.position.y -= 15;
   }
   
-  enemy.position.y = enemy.position.y + 10;
+  enemy.position.y = enemy.position.y + 12;
   
   
-  food.position.y = food.position.y + 10;
+  food.position.y = food.position.y + 12;
   
   if (enemy.position.y > height) {
       enemy.position.y = 0;
