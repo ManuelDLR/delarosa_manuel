@@ -4,10 +4,8 @@ var enemy;
 var enemyImage;
 var food;
 var foodImage;
-
 var backgroundImage;
 var isGameOver;
-
 var score;
 
 function preload() {
@@ -100,8 +98,11 @@ function gameOver() {
   background(0);
   textAlign(CENTER);
   fill("white");
-  text("YOU'RE HOOKED!!! GAME OVER!!! YOU SUCK!!!", width/2, height/2);
+  text("YOU SUCK!!!", width/2, height/2);
   text("Click anywhere to GO again", width/2, 3*height/4);
+  text("YOU'RE HOOKED!!!", width/2, height/4);
+  text("GAME OVER!!!", width/2, height/3);
+  text("OH NO, NOT THE BAIT!!!", width/2, height/5);
 }
 
 function mouseClicked() {
