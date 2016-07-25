@@ -17,7 +17,7 @@ function setup(){
     isGameOver = false;
     score = 0;
     
-    createCanvas(400, 300);
+    createCanvas(1300, 650);
     background(150, 200, 250);
     
     groundSprites = new Group();
@@ -28,7 +28,7 @@ function setup(){
         groundSprites.add(groundSprite);
     }
     
-    player = createSprite(100, height-75, 50, 50);
+    player = createSprite(50, height-75, 50, 50);
     obstacleSprites = new Group();
 }
 
@@ -40,7 +40,7 @@ function draw(){
         text("Your score was: " + score, camera.position.x, camera.position.y - 20);
         text("Game Over! Click anywheere to restart", camera.position.x, camera.position.y);
     } else {
-    background(150, 200, 250);
+    background(500, 0, 0);
     
     player.velocity.y = player.velocity.y + GRAVITY;
     if (groundSprites.overlap(player)){
