@@ -6,12 +6,17 @@ var numGroundSprites;
 var GRAVITY = 0.3;
 
 var player;
+var playerImage;
 var jump = -5;
 
 var obstacleSprites;
 
 var isGameOver;
 var score;
+
+function preload(){
+    playerImage = loadImage("enemyjoker.png")
+}
 
 function setup(){
     isGameOver = false;
@@ -29,6 +34,7 @@ function setup(){
     }
     
     player = createSprite(50, height-75, 50, 50);
+    player.addImage(playerImage);
     obstacleSprites = new Group();
 }
 
@@ -48,7 +54,7 @@ function draw(){
         player.position.y = (height -50) - (player.height/2);
     }
     
-    if (keyDown(UP_ARROW)){
+    if (keyDown(UP_ARROW) && player.position.x > (playerImage.width/2)){
         player.velocity.y = jump;
     }
     
