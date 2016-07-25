@@ -14,8 +14,8 @@ var obstacleSprites;
 var isGameOver;
 var score;
 
-function preload(){
-    playerImage = loadImage("enemyjoker.png")
+function preload() {
+    playerImage = loadImage("enemyjoker.png");
 }
 
 function setup(){
