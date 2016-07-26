@@ -35,7 +35,8 @@ function setup() {
     groundSprites = new Group();
 
     numGroundSprites = width / GROUND_SPRITE_WIDTH;
-    for (var n = 0; n < numGroundSprites; n++) {
+    console.log(numGroundSprites)
+    for (var n = 0; n < numGroundSprites + 100; n++) {
         var groundSprite = createSprite(n * 50, height - 25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
         groundSprite.addImage(groundImage);
         groundSprites.add(groundSprite);
@@ -84,7 +85,7 @@ function draw() {
         camera.position.x = player.position.x + (width / 4);
 
         var firstGroundSprite = groundSprites[0];
-        if (firstGroundSprite.position.x <= camera.position.x - (width / 2 )) {
+        if (firstGroundSprite.position.x <= camera.position.x - (width / 2)) {
             groundSprites.remove(firstGroundSprite);
             firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites * firstGroundSprite.width;
             groundSprites.add(firstGroundSprite);
