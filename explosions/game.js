@@ -1,5 +1,5 @@
 var groundSprites;
-var GROUND_SPRITE_WIDTH = 50;
+var GROUND_SPRITE_WIDTH = 239;
 var GROUND_SPRITE_HEIGHT = 50;
 var numGroundSprites;
 
@@ -13,7 +13,6 @@ var obstacleSprites;
 var obstacleImage;
 
 var groundImage;
-var groundSprite;
 
 var isGameOver;
 var score;
@@ -35,11 +34,12 @@ function setup() {
 
     groundSprites = new Group();
 
-    numGroundSprites = width / GROUND_SPRITE_WIDTH + 1;
+    numGroundSprites = width / GROUND_SPRITE_WIDTH;
     for (var n = 0; n < numGroundSprites; n++) {
-        groundSprite = createSprite(n * 50, height - 25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
-        groundSprites.add(groundSprite);
+        var groundSprite = createSprite(n * 50, height - 25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
         groundSprite.addImage(groundImage);
+        groundSprites.add(groundSprite);
+
     }
 
     player = createSprite(50, height - 75, 50, 50);
@@ -84,7 +84,7 @@ function draw() {
         camera.position.x = player.position.x + (width / 4);
 
         var firstGroundSprite = groundSprites[0];
-        if (firstGroundSprite.position.x <= camera.position.x - (width / 2 + firstGroundSprite.width / 2)) {
+        if (firstGroundSprite.position.x <= camera.position.x - (width / 2 )) {
             groundSprites.remove(firstGroundSprite);
             firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites * firstGroundSprite.width;
             groundSprites.add(firstGroundSprite);
