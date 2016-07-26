@@ -10,12 +10,14 @@ var playerImage;
 var jump = -5;
 
 var obstacleSprites;
+var obstacleImage;
 
 var isGameOver;
 var score;
 
 function preload() {
     playerImage = loadImage("playermatch.png");
+    obstacleImage = loadImage("obstacletnt.png");
 }
 
 function setup(){
@@ -70,7 +72,10 @@ function draw(){
     
     if (random() > 0.95){
         var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
+        obstacle
         obstacleSprites.add(obstacle);
+        obstacle.addImage(obstacleImage);
+        
     }
     
     var firstObstacle = obstacleSprites[0];
