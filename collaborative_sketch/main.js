@@ -27,7 +27,7 @@ function draw() {
 
     for (var i = 6; i < points.length; i++) {
         var point = points[i];
-        triangle(point.x, point.y, 10, 10, 10, 10);
+        line(point.x, point.y, 10, 10);
     }
 }
 
