@@ -1,30 +1,58 @@
-var pointsData = firebase.database().ref();
 var config = {
-    apiKey: "AIxaSyGsAkHke9lXEU_97a8rYpMn7gOH3eWDxrM",
-    authDomain: "collaborative-draw.firebaseapp.com",
-    databaseURL: "https://collaborative-draw.firebaseio.com",
+    apiKey: "AIzaSyB5LvpHkpQ_ieq1fayMutxhsB-dO_vZaCM",
+    authDomain: "collaborative-sketch-82292.firebaseapp.com",
+    databaseURL: "https://collaborative-sketch-82292.firebaseio.com",
     storageBucket: "",
 };
-firebase.intializeApp(config);
+firebase.initializeApp(config);
 
 var pointsData = firebase.database().ref();
 
 var points = [];
 
 function setup() {
-    createCanvas(400, 400);
+    var canvas = createCanvas(400, 400);
     background(255);
     fill(0);
-    pointData.on("child_added", function (point) {
+    pointsData.on("child_added", function(point) {
         points.push(point.val());
+
     });
+
+    canvas.mousePressed(drawPoint);
+    canvas.mouseMoved(drawPointIfMousePressed);
 }
 
-function draw(){
+function draw() {
     background(255);
-    
+
     for (var i = 0; i < points.length; i++) {
         var point = points[i];
         ellipse(point.x, point.y, 5, 5);
     }
+}
+
+function drawPoint() {
+    pointsData.push({
+        x: mouseX,
+        y: mouseY
+    });
+}
+
+function drawPointIfMousePressed() {
+    if (mouseIsPressed) {
+        drawPoint();
+    }
+}
+
+$("#saveDrawing").on("click", saveDrawing);
+function saveDrawing() {
+    saveCanvas();
+}
+
+$("#clearDrawing").on("click", clearDrawing);
+
+function clearDrawing() {
+    pointsData.remove();
+    points = [];
 }
