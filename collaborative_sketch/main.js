@@ -16,7 +16,6 @@ function setup() {
     fill(0);
     pointsData.on("child_added", function(point) {
         points.push(point.val());
-
     });
 
     canvas.mousePressed(drawPoint);
@@ -26,9 +25,9 @@ function setup() {
 function draw() {
     background(255);
 
-    for (var i = 0; i < points.length; i++) {
+    for (var i = 6; i < points.length; i++) {
         var point = points[i];
-        ellipse(point.x, point.y, 5, 5);
+        triangle(point.x, point.y, 10, 10, 10, 10);
     }
 }
 
