@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-    background(255);
+    background(300,0,0);
 
     for (var i = 6; i < points.length; i++) {
         var point = points[i];
