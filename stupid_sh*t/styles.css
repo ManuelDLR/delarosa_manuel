@@ -5,9 +5,10 @@ h2 {
 }
 
 h3 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Nova Mono', ;
     font-size: 50px;
     color: red;
+    font-style: italic;
 }
 
 img {
@@ -16,12 +17,12 @@ img {
 
 p {
     font-family: 'Oswald', sans-serif;
-    font-size: 15px;
-    color: white;
+    font-size: 20px;
+    color: green;
 }
 
-ul {
-    font-family: 'Oswald', sans-serif;
+ol {
+    font-family: 'Poiret One', cursive;
     font-size: 25px;
     color: white;
 }
@@ -39,13 +40,13 @@ form {
 }
 
 #easy {
-    font-family: "Pinyon Script";
+    font-family: Cursive;
     width: 300px;
     height: 300px;
     border-radius: 150px;
     border-color: red;
     background-color: green;
-    font-size: 80px;
+    font-size: 70px;
     color: white;
     font-style: italic;
 }
