@@ -1,0 +1,51 @@
+h2 {
+    font-family: 'Yellowtail', cursive;
+    font-size: 100px;
+    color: #00FF00;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    color: red;
+}
+
+img {
+    width: 400px;
+}
+
+p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+ul {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+body {
+    background-image: url('wtfc.jpg');
+    background-size: 1350px 750px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+form {
+    font-family: 'Oswald', sans-serif;
+}
+
+#easy {
+    font-family: "Pinyon Script";
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    border-color: red;
+    background-color: green;
+    font-size: 80px;
+    color: white;
+    font-style: italic;
+}
