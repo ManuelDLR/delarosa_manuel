@@ -15,14 +15,14 @@ var foodPositions = [
 function drawUserCell() {
     context.beginPath();
     context.arc(x, y, 40, 0, 2 * 3.14159);
-    context.fillStyle = "cyan";
+    context.fillStyle = "red";
     context.fill();
 }
 
 function clearCanvas() {
     context.beginPath();
     context.rect(0, 0, 500, 500);
-    context.fillStyle = "white";
+    context.fillStyle = "black";
     context.fill();
 }
 
@@ -61,7 +61,7 @@ function mouseMoved(e) {
 function drawCircle(circleX, circleY, radius) {
     context.beginPath();
     context.arc(circleX, circleY, radius, 0, 2 * 3.14159);
-    context.fillStyle = "cyan";
+    context.fillStyle = "red";
     context.fill();
 }
 
