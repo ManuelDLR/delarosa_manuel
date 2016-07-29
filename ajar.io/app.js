@@ -21,7 +21,7 @@ function drawUserCell() {
 
 function clearCanvas() {
     context.beginPath();
-    context.rect(0, 0, 500, 500);
+    context.rect(0, 0, 1300, 700);
     context.fillStyle = "black";
     context.fill();
 }
