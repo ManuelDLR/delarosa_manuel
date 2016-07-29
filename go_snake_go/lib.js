@@ -92,4 +92,62 @@ function movesnake() {
             n.y = h.y + dy;
             break;
     }
+    // if out of box or collision with ourselves, we die
+    if (collision(n)) {
+        return false;
+    }
+
+    snake.unshift(n);
+
+    // if there's food there
+    if (meal(n)) {
+        newfood(); // we eat it and another shows up
+
+    }
+    else {
+        snake.pop();
+        // we only remove the tail if there wasn't food
+        // if there was food, the snake grew
+    }
+
+    return true;
+
+}
+
+function die() {
+    if (id) {
+        clearInterval(id);
+    }
+}
+
+function circle(x, y, r) {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.fill();
+}
+
+function rect(x, y, w, h) {
+    ctx.beginPath();
+    ctx.rect(x, y, w, h);
+    ctx.closePath();
+    ctx.fill();
+}
+
+function screenclear() {
+    ctx.fillStyle = "#000000";
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+    rect(0, 0, WIDTH, HEIGHT);
+}
+
+function drawsnake() {
+    ctx.fillStyle = "#FFFFFF";
+    snake.forEach(function(p) {
+        rect(p.x, p.y, dx, dy);
+    })
+}
+
+function drawfood() {
+    ctx.fillStyle = "#FF0000";
+    circle(food.x + food.r, food.y + food.r, food.r);
 }
